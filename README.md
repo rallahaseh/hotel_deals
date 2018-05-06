@@ -1,8 +1,10 @@
 # Expedia Coding Exercise
 
 #### Language
+![alt text](https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/python/python.png)
 	Python
 #### Framework
+![alt text](https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/django/django.png)
 	Django
 
 ## Files
