@@ -1,4 +1,5 @@
 # Expedia Coding Exercise
+Create a very simple site that consumes offer svc API as a server-side call and displays deals in an appealing manner.
 
 #### Language
 <img src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/python/python.png" width="200" height="200" />
