@@ -9,6 +9,14 @@ Previously, research on models would be done in  [R](https://en.wikipedia.org/wi
 
 By using Python everywhere, you can easily  **facilitate communication between teams**. Anyone can run an experiment using the same code that runs in production.
 
+## Problem
+
+For some resone Herokue could not read the **requirements.txt** file which is response for the dependencies of the project so [requests library](https://github.com/requests/requests) could not be included.
+
+Website: https://stark-hollows-57193.herokuapp.com/
+
+Demo Video: [task_demo](https://drive.google.com/open?id=1De46YjOZpQujwZmrd9qxOwnPRNBudwp1)
+
 ## Process
 
 First time using Django, so I tried the function based views and then I discovered how classes work and reimplement them and continue implementing the GET/POST requests that will be handled through the web-page.
