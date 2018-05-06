@@ -13,7 +13,7 @@ class HomeView(TemplateView):
     template_name = 'hotels_deals/index.html'
 
     def get(self, request):
-        # <view logic>
+        # TEST Get
         # return HttpResponse('get result')
 
         form = HomeForm()
@@ -29,9 +29,7 @@ class HomeView(TemplateView):
         # return HttpResponse(request.POST['destinationName'])
 
         form = HomeForm(request.POST)
-        # if form.is_valid():
-        #
-        #
+
         destination_name = request.POST['destinationName']
         min_trip_start = request.POST['minTripStartDate']
         max_trip_start = request.POST['maxTripStartDate']

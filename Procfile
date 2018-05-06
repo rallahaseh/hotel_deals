@@ -1,1 +1,1 @@
-web: gunicorn hotel_deals.wsgi --log-file -
+web: gunicorn hotel_deals.wsgi
