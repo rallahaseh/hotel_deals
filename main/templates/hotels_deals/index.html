@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Static Style Sheet -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <title>Hotels Deals</title>
+    <br/>
+    <img src="https://www.expedia.com/_dms/interstitial/logo.svg?siteid=1&locale=en_US" class="img-responsive center-block" alt="Responsive image">
+    <br/>
+    <div class="container">
+        <h2 class="text-center">Search Cheap Hotels, Deals, Discounts & Reservations | Expedia</h2>
+        <br/>
+        <p class="text-justify"> Expedia.com makes it simple to book your next hotel stay. Whether you're traveling for business or pleasure, we provide you with some of the best hotel deals around. Discover cheap rates on rooms near the ocean, tucked away in the mountains, in the heart of the city, or scattered in the countryside. With Expedia.com, your U.S. hotel reservation options are endless.</p>
+    </div>
+    <br/>
+
+</head>
+<body>
+{% block body %}
+<br><br/>
+{#<form >#}
+
+<div class="container">
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" placeholder="Search ..." />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <form class="form-horizontal" role="form" method="post">
+                                        {% csrf_token %}
+                                        {{ form.post }}
+                                        <div class="form-group" id="search_hotel_destination_name">
+                                            <label for="contain">Destination Name</label>
+                                            <input class="form-control" id="destinationName" name="destinationName" placeholder="Destination City / Region ID" type="text" value="">
+                                        </div>
+                                        <div class="form-group" id="search_hotel_trip_date">
+                                            <label for="contain">Trip Date</label>
+                                            <div class="input-group margin-bottom-sm">
+                                                <input class="form-control" id="minTripStartDate" name="minTripStartDate" data-val="true" data-val-date="The field minTripStartDate must be a date." style="width:43%;float:left;height:35px" type="date" value="">
+                                                <label for="" style="width:10%;padding:5px 20px; font-size:20px">-</label>
+                                                <input class="form-control" id="maxTripStartDate" name="maxTripStartDate" data-val="true" data-val-date="The field maxTripStartDate must be a date." style="width:44%;float:right;height:35px" type="date" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" id="search_hotel_length_of_stay">
+                                            <label for="contain">Length of Stay</label>
+                                            <input class="form-control" data-val="true" data-val-number="The field lengthOfStay must be a number." id="lengthOfStay" name="lengthOfStay" placeholder="Length of Stay" type="number" value="">
+                                        </div>
+                                        <div class="form-group" id="search_hotel_star_rating">
+                                            <label for="contain">Star Rating</label>
+                                            <div class="input-group margin-bottom-sm">
+                                                <input class="form-control" data-val="true" data-val-number="The field minStarRating must be a number." id="minStarRating" name="minStarRating" placeholder="Min Star Rate" style="width:43%;float:left;height:35px" type="number" value="">
+                                                <label for="" style="width:10%;padding:5px 20px; font-size:20px">-</label>
+                                                <input class="form-control" data-val="true" data-val-number="The field maxStarRating must be a number." id="maxStarRating" name="maxStarRating" placeholder="Max Star Rate" style="width:44%;float:right;height:35px" type="number" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" id="search_hotel_total_rating">
+                                            <label for="contain">Total Rate</label>
+                                            <div class="input-group margin-bottom-sm">
+                                                <input class="form-control" data-val="true" data-val-number="The field minTotalRate must be a number." id="minTotalRate" name="minTotalRate" placeholder="Min Total Rate" style="width:43%;float:left;height:35px" type="number" value="">
+                                                <label for="" style="width:10%;padding:5px 20px; font-size:20px">-</label>
+                                                <input class="form-control" data-val="true" data-val-number="The field maxTotalRate must be a number." id="maxTotalRate" name="maxTotalRate" placeholder="Max Total Rate" style="width:44%;float:right;height:35px" type="number" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" id="search_hotel_guest_rating">
+                                            <label for="contain">Guest Rate</label>
+                                            <div class="input-group margin-bottom-sm">
+                                                <input class="form-control" data-val="true" data-val-number="The field minGuestRating must be a number." id="minGuestRating" name="minGuestRating" placeholder="Min Guest Rate" style="width:43%;float:left;height:35px" type="number" value="">
+                                                <label for="" style="width:10%;padding:5px 20px; font-size:20px">-</label>
+                                                <input class="form-control" data-val="true" data-val-number="The field maxGuestRating must be a number." id="maxGuestRating" name="maxGuestRating" placeholder="Max Guest Rate" style="width:44%;float:right;height:35px" type="number" value="">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block" name ="search_button">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br/>
+    <table class="table table-condensed">
+    <thead>
+      <tr>
+          <th></th>
+          <th class="text-center"> Name </th>
+          <th class="text-center"> Rating </th>
+          <th class="text-center"> Destination </th>
+          <th class="text-center"> Pricing </th>
+          <th class="text-center"> Offer Date <span class="glyphicon glyphicon-calendar"></span></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for data in searchData %}
+      <tr>
+          <td class="text-center">
+              <a href="{{data.hotelUrls.hotelInfositeUrl}}">
+                  <img src="{{ data.hotelInfo.hotelImageUrl }}" class="img-thumbnail" alt="Responsive image">
+              </a>
+          </td>
+          <td class="text-center">
+              <a href="{{data.hotelUrls.hotelSearchResultUrl}}">{{ data.hotelInfo.hotelName }}</a>
+          </td>
+          <td class="text-center">
+              {{ data.hotelInfo.hotelStarRating }}
+          </td>
+          <td class="text-center">
+              {{ data.hotelInfo.hotelLongDestination }}
+          </td>
+          <td>
+              <div class="input-group text-center">
+                    <strong>{{ data.hotelPricingInfo.totalPriceValue }}{{ data.hotelPricingInfo.currency }}</strong>
+              </div>
+              <s>{{ data.hotelPricingInfo.originalPricePerNight }}{{ data.hotelPricingInfo.currency }}</s>
+          </td>
+          <td class="text-center">
+              <fieldset disabled>
+                  <div class="input-group col-md-10 col-md-offset-2">
+                      <input type="text" class="form-control text-center" value="{{ data.offerDateRange.travelStartDate.0 }}/{{ data.offerDateRange.travelStartDate.1 }}/{{ data.offerDateRange.travelStartDate.2 }}">
+                      <div class="input-group-addon">to</div>
+                      <input type="text" class="form-control  text-center" value="{{ data.offerDateRange.travelEndDate.0 }}/{{ data.offerDateRange.travelEndDate.1 }}/{{ data.offerDateRange.travelEndDate.2 }}">
+                  </div>
+              </fieldset>
+          </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{#</form>#}
+{% endblock %}
+</body>
+</html>
