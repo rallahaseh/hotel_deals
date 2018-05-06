@@ -47,8 +47,8 @@ Requirements:
 
 After you install the required list.
 1.  We will be using a new directory `hotels` from your home directory.
-> $ mkdir hotels
-$ cd hotel
+> $ mkdir hotels  
+	$ cd hotel
 2. Create a virtualenv called `myvenv`.
 >$ python -m venv myvenv
 3. Move the project to your main web root directory.
