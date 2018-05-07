@@ -1,6 +1,6 @@
 # Expedia Coding Exercise
 - Create a very simple site that consumes offer svc API as a server-side call and displays deals in an appealing manner.
-- [About.md](https://github.com/rallahaseh/hotel_deals/blob/master/ABOUT.md)
+- **[About.md](https://github.com/rallahaseh/hotel_deals/blob/master/ABOUT.md)**
 - **[Website](https://hotels-deals-demo.herokuapp.com/)**
 
 #### Language
