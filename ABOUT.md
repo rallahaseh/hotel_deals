@@ -13,7 +13,7 @@ By using Python everywhere, you can easily  **facilitate communication between t
 
 For some resone Herokue could not read the **requirements.txt** file which is response for the dependencies of the project so [requests library](https://github.com/requests/requests) could not be included.
 
-Website: https://stark-hollows-57193.herokuapp.com/
+Website: https://hotels-deals-demo.herokuapp.com/
 
 Demo Video: https://drive.google.com/open?id=1G0qgvbkVky32g5c-77JO4gnLHB81oAKF
 
@@ -26,6 +26,8 @@ Okay so we got a strict development cycle here.
 2. Add default value params for orchestrator
 3. Add optional params if entered
 4. Update the request and the response
+5. Deploy with **Heroku**
+6. Add repository to **travis-ci**
 
 ## General
 
