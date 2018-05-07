@@ -27,7 +27,7 @@ Okay so we got a strict development cycle here.
 3. Add optional params if entered
 4. Update the request and the response
 5. Deploy with **Heroku**
-6. Add repository to **travis-ci**
+6. Add repository to **Travis-ci**
 
 ## General
 
